@@ -43,9 +43,9 @@ Expected Output: 1, go to playerTurn()
 
 Describe updatePlayerTotal()
 
-Test: It will take result of final rollDice() when player chooses hold/1 and add to PlayerStats[1]
-Code: updatePlayerTotal(5)
-Expected Output: player1 = {name: "player 1", runTotal: 5}
+XTest: It will take result of final turnTotal()  and add to Player*.currentScore
+Code: updatePlayerTotal(playerOne, 5)
+Expected Output: player1 = {name: "player 1", currentScore: 5}
 
 Test: It will trigger gameEnd() when playerTotal reaches > 99
 Code: 
