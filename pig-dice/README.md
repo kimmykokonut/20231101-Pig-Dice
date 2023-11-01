@@ -72,3 +72,12 @@ Expected output: rollDice()
 Test: Didsplay roll points for player 1
 Code: 
 Result: 
+
+#TODO:
+give start button a job
+git play again button a job
+hide game until start button pushed and announce P1 turn first.
+hide play again until winner announced
+
+make player turn switches for action and alert on page for whose turn it is
+refactor functions so p1 p2 could do either. turn? switch? bolean?
