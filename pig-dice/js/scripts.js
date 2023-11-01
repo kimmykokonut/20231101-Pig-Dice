@@ -1,21 +1,32 @@
-// Test: It will create blueprint for player stats with name and running total - PASS
-// Test: It will add player to PlayerStats and set runTotal to zero - PASS
+function GamePlayers() {
+    this.players = {};
+    this.currentId = 0;
+}
 
-function Players(name, currentScore) {
+GamePlayers.prototype.assignId = function() {
+    this.currentId += 1;
+    return this.currentId;
+};
+
+GamePlayers.prototype.addPlayer = function(player) {
+    player.id = this.assignId();
+    this.players[player.id] = player;
+};
+
+function Player(name, currentScore) {
     this.name = name;
     this.currentScore = currentScore;
 }
+let playerOne = new Player("p1", 0);
+let playerTwo = new Player("p2", 0);
+GamePlayers.addPlayer(playerOne);
+GamePlayers.addPlayer(playerOne);
 
-let playerOne = new Players("p1", 0);
-let playerTwo = new Players("p2", 0);
-
-// Test: It will take roll and add to turnTotal PASS
-// Test: If player rolls 1, turnScore = 0, playerTurn switch PASS
-// Test: It will give player option to roll again if result is 2-6 - PASS 
 
 let turnScore = 0;
 
 function rollDice() {
+    console.log("dice is rolling");
     let roll = Math.floor(Math.random() * 6) + 1; 
     console.log("Dice role is " + roll);
     if (roll === 1) {
@@ -25,22 +36,15 @@ function rollDice() {
     return turnTotal(roll);   
     }
 }
-
 function turnTotal(roll) {
     turnScore += roll;
     return turnScore;
 }
-
 function rollAgain() { //attached to "click" EL for "roll again button"
     rollDice();
 }
-
 // function holdPassTurn() { //attached to "click " el for "hold/pass"
 //     playerSwitch?
-// }
-
-// Test: Game over once score reaches >99  - PASS
-
 function updatePlayerTotal(player, turnScore) { //param 1= playerOne or playerTwo
     player.currentScore += turnScore;
     console.log(player.currentScore);
@@ -49,6 +53,8 @@ function updatePlayerTotal(player, turnScore) { //param 1= playerOne or playerTw
     } else return "Roll again?"
 }
 
+function playerSwitch()
 
-// Test: It will give player option to "hold", pass turn to player 2
-
+window.addEventListener("load", function() {
+    // this.document.querySelector("div#intro").addEventListener("submit", ***);
+})
