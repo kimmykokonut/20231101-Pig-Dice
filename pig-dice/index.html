@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Pig Dice</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="start-visible">
+            <h1> Let's play some piggly-wiggly!</h1>
+            <h2 id=p1> Player 1 </h2>
+            <h2 id="p2"> Player 2 </h2>
+            <button> Start Game </button>
+        </div>
+
+        <div class="start-hidden">
+            <div class="p1-score-sheet">
+                <h3> Player 1 </h3>
+                <p id="rollCount1"> Roll Count </p>
+                <p id="turnTotal1"> Turn Total </p>
+                <p id="currentTotal1"> Current Total </p>
+            </div>
+
+            <div class="p2-score-sheet">
+                <h3> Player 2 </h3>
+                <p id="rollCount2"> Roll Count </p>
+                <p id="turnTotal2"> Turn Total </p>
+                <p id="currentTotal2"> Current Total </p>
+            </div>
+
+            <button> Roll </button>
+            <button> Hold </button>
+        </div>
+
+        <div class="Restart">
+            <p> Player** Wins! </p>
+            <h3> Would you like to play again? </h3>
+            <button> Play Again </button>
+        </div>
+    </div>
+</body>
+
+</html>
