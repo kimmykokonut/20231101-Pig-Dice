@@ -62,3 +62,13 @@ Describe gameEnd()
 Test: It will determine winner based on runTotal >99
 Code: gameEnd()
 Expected Output: ?
+
+Describe: OnClick of Start button, player 1 prompted for first roll
+
+Test: Click event listener for start button
+Code: Initialize gameplay and complete roll 1
+Expected output: rollDice()
+
+Test: Didsplay roll points for player 1
+Code: 
+Result: 
