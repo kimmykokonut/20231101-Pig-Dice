@@ -35,20 +35,19 @@ function rollAgain() { //attached to "click" EL for "roll again button"
     rollDice();
 }
 
-function holdPassTurn() { //attached to "click " el for "hold/pass"
-    playerSwitch?
-}
+// function holdPassTurn() { //attached to "click " el for "hold/pass"
+//     playerSwitch?
+// }
+
+// Test: Game over once score reaches >99  - PASS
 
 function updatePlayerTotal(player, turnScore) { //param 1= playerOne or playerTwo
     player.currentScore += turnScore;
     console.log(player.currentScore);
+    if (player.currentScore > 99) {
+        return "You've won!"
+    } else return "Roll again?"
 }
-
-
-Test: It will take result of final rollDice() when player chooses hold/1 and add to PlayerStats[1]
-Code: updatePlayerTotal(5)
-Expected Output: player1 = {name: "player 1", runTotal: 5}
-
 
 
 // Test: It will give player option to "hold", pass turn to player 2
