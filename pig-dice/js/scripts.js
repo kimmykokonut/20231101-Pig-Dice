@@ -32,12 +32,10 @@ let turnScore = 0;
 
 function rollDice() {
     let roll = Math.floor(Math.random() * 6) + 1; 
-    console.log(roll);
-    turnScore += roll;
-    return turnScore;   
+    console.log("Dice role is " + roll);
+    return turnTotal(roll);   
 }
-// function turnScore() {
-//     let turnScore = 0;
-//     turnScore += roll;
-//     return turnScore;
-// }
+function turnTotal(roll) {
+    turnScore += roll;
+    return turnScore;
+}

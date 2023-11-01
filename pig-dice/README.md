@@ -22,16 +22,23 @@ Test: It will output a random number 1-6 and return result as turnScore
 Code: rollDice(Math.floor(Math.random() * 6) + 1;)
 Expected Output: number between 1 and 6
 
+Describe turnTotal()
+
+Test: It will take roll and add to turnTotal
+Code: function turnTotal(roll) 
+
+Describe rollAgain()
+
 Test: It will give player option to roll again if result is 2-6
-Code: rollDice()=> 3,
+Code: rollAgain,
 Expected Output: trigger rollDice() again
 
 Test: It will give player option to "hold", pass turn to player 2
-Code: rollDice()=> 
+Code: rollAgain() 
 Expected Output: hold? y/n
 
 Test: If player rolls 1, turnScore = 0, playerTurn switch
-Code: rollDice()
+Code: rollAgain()
 Expected Output: 1, go to playerTurn()
 
 Describe updatePlayerTotal()
