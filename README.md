@@ -45,7 +45,7 @@ Expected Output: 1, go to playerTurn()
 
 Describe updatePlayerTotal()
 
-XTest: It will take result of final turnTotal()  and add to Player*.currentScore
+Test: It will take result of final turnTotal()  and add to Player*.currentScore
 Code: updatePlayerTotal(playerOne, 5)
 Expected Output: player1 = {name: "player 1", currentScore: 5}
 
