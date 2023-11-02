@@ -61,6 +61,7 @@ function rollAgain() {
 
 // UI Logic
 function handleRoll() {
+    document.querySelector("h2#p1First").innerText = "";
     document.querySelector('p#error1').innerText = "";
     let rollValue = rollDice()
     document.querySelector('p#rollCount1').innerText = currentPlayer.name + "Dice Value: " + rollValue;
