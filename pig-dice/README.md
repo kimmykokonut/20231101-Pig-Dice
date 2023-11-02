@@ -1,9 +1,11 @@
-#Pig Dice Pair Prompt
-_by Grant Abel & Kim Robinson_
+# Pig Dice by Grant Abel & Kim Robinson
 
-####Description
-Write a program where two users can play Pig Dice against each other
+## Description
 
+### Epicodus Pair Project: Program where 2 users can play pig dice against each other
+The goal of this multi-day project is to exercise your JavaScript programming skills with constructors, prototypes, objects, properties, methods, and DOM manipulation and traversal.
+
+----------------
 ##TDD Testing
 
 Describe constructor function for PlayerStats
