@@ -1,3 +1,9 @@
+.hiddenTurn {
+  display: none;
+}
 .hidden {
+  display: none;
+}
+.finalHidden {
   display: none;
 }

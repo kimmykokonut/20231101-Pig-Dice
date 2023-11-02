@@ -69,8 +69,7 @@ function handleRoll1(event) {
     document.querySelector('p#turnTotal1').innerText = "Turn total " + turnScore;
 }
 
-function handleRoll2(event) {
-    event.preventDefault ();
+function handleRoll2() {
     let rollValue = rollDice()
     document.querySelector('p#rollCount2').innerText = "Dice Value: " + rollValue;
     if (rollValue === 1) {
@@ -120,15 +119,34 @@ function updatePlayerTotal(player, turnScore) { //param 1= playerOne or playerTw
         return "You've won!"
     } else return "Roll again?"
 }
-window.addEventListener("load", function() {
-    let button = document.querySelector('button#startBtn');
+
+
+// function playerTurnString()
+
+window.addEventListener("load", function(e) {
+    e.preventDefault();
+    let startButton = document.getElementById('startBtn');
     let rollP1 = this.document.querySelector('button#roll1');
     let rollP2 = this.document.querySelector('button#roll2');
     let holdP1 = this.document.querySelector('button#hold1');
     let holdP2 = this.document.querySelector('button#hold2');
-    // button.addEventListener("click", XXX); needs a new job for start button
+    startButton.addEventListener("click", function() {
+        let showTurn = document.querySelector("div#showTurn");
+        showTurn.removeAttribute("class");
+    });
+    startButton.addEventListener("click", function() {
+        let showScoreCard = document.querySelector("div#scoreSheet")
+        showScoreCard.removeAttribute("class");
+    });
     rollP1.addEventListener("click", handleRoll1);
     rollP2.addEventListener("click", handleRoll2);
     holdP1.addEventListener("click", holdChange1);
     holdP2.addEventListener("click", holdChange2);
-})
+});
+
+
+// document.querySelector('.hidden').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     var target = document.querySelector('.hidden');
+//     if (hidden.classList.contains('active')) {
+//       target.classList.remove('active');

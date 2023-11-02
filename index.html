@@ -26,7 +26,11 @@
             <button type="button" id="startBtn"> Start Game </button>
         </div>
         <hr />
-        <div class="start-hidden row">
+        <div class="hidden" id="showTurn">
+            <p id="p1Turn"> It is player one's turn. </p>
+            <p id="p2Turn"> It is player two's turn. </p>
+        </div>
+        <div class="hidden row" id="scoreSheet">
             <div class="p1-score-sheet col-md-6" id="p1Display">
                 <h3> Player 1 </h3>
                 <p id="rollCount1"> Roll Count </p>
@@ -45,13 +49,14 @@
                 <button type="button" id="hold2"> Hold </button>
             </div>
         </div>
-        <hr />
-        <div class="Restart">
-            <p> Player** Wins! </p>
-            <h3> Would you like to play again? </h3>
-            <button> Play Again </button>
-        </div>
     </div>
+    <hr />
+    <div class="finalHidden" id="restart">
+        <p> Player** Wins! </p>
+        <h3> Would you like to play again? </h3>
+        <button> Play Again </button>
+    </div>
+
 </body>
 
 </html>
