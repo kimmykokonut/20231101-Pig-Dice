@@ -63,7 +63,7 @@ function rollAgain() {
 function handleRoll() {
     document.querySelector('p#error1').innerText = "";
     let rollValue = rollDice()
-    document.querySelector('p#rollCount1').innerText = currentPlayer.name + <kbd>"Dice Value: "</kbd> + rollValue;
+    document.querySelector('p#rollCount1').innerText = currentPlayer.name + "Dice Value: " + rollValue;
     if (rollValue === 1) {
         turnScore = 0
         changePlayer();
