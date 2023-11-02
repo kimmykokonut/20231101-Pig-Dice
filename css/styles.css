@@ -1,5 +1,5 @@
-.hiddenTurn {
-  display: none;
+* {
+  border: 2px dashed red;
 }
 .hidden {
   display: none;
@@ -12,4 +12,9 @@
 }
 .column {
   flex: 50%;
+}
+#imgDice {
+  height: auto;
+  max-width: 50%;
+  margin-bottom: 20%;
 }
