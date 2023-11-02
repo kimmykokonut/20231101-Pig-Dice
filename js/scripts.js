@@ -63,7 +63,7 @@ function rollAgain() {
 function handleRoll() {
     document.querySelector('p#error1').innerText = "";
     let rollValue = rollDice()
-    document.querySelector('p#rollCount1').innerText = currentPlayer.name + " Dice Value: " + rollValue;
+    document.querySelector('p#rollCount1').innerText = currentPlayer.name + <kbd>"Dice Value: "</kbd> + rollValue;
     if (rollValue === 1) {
         turnScore = 0
         changePlayer();
@@ -72,10 +72,10 @@ function handleRoll() {
         turnTotal(rollValue);
     }
     document.querySelector('p#turnTotal1').innerText = currentPlayer.name + "Turn total: " + turnScore;
+    document.querySelector('p#whoseTurn').innerText = "It is " + currentPlayer.name + " turn! Click Hold to end turn and other player click Roll";
 }
 
 function holdChange() {
-    document.querySelector('p#whoseTurn').innerText = "It is " + currentPlayer.name + " turn!";
     currentPlayer.currentScore += turnScore;
     console.log(currentPlayer.currentScore);
     updatePlayerScoreTotal();
@@ -93,20 +93,25 @@ function updatePlayerScoreTotal() {
         document.querySelector('p#currentTotal2').innerText = "Current total " + playerTwo.currentScore;
     }
     if (currentPlayer.currentScore > 99) {
-        window.alert(currentPlayer + " wins!");
+        let showWin = document.querySelector("div.finalHidden");
+        showWin.removeAttribute("class");
+        document.querySelector('h3#winner').innerText = currentPlayer.name + " wins!";
     }
 }
 
     window.addEventListener("load", function () {
-        let startButton = document.getElementById('startBtn');
+        const startButton = document.getElementById('startBtn');
         startButton.addEventListener("click", function (event) {
             event.preventDefault();
             let showScoreCard = document.querySelector("div#scoreSheet");
             showScoreCard.removeAttribute("class");
         });
-        let rollP1 = this.document.querySelector('button#roll1');
-        let holdP1 = this.document.querySelector('button#hold1');  
+        const rollP1 = this.document.querySelector('button#roll1');
+        const holdP1 = this.document.querySelector('button#hold1');  
         rollP1.addEventListener("click", handleRoll);
         holdP1.addEventListener("click", holdChange);
-        
+        const resetButton = document.getElementById('reset');
+        resetButton.addEventListener("click", function() {
+            window.location.reload(true);
+        });
     });

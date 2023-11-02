@@ -8,6 +8,8 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js"> </script>
+    <script rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> </script>
     <title>Pig Dice</title>
 </head>
 
@@ -32,8 +34,8 @@
                     <button type="button" id="roll1"> Roll </button>
                     <button type="button" id="hold1"> Hold </button>
                     <p id="error1"></p>
-                    <p id="rollCount1"> Roll Count </p>
-                    <p id="turnTotal1"> Turn Total </p>
+                    <p id="rollCount1"><kbd> Roll Count </kbd></p>
+                    <p id="turnTotal1"><kbd> Turn Total </kbd></p>
                 </div>
                 <div class="row" id="totalDisplay">
                     <div class="column">
@@ -51,9 +53,9 @@
     </div>
     <hr />
     <div class="finalHidden" id="restart">
-        <p> Player** Wins! </p>
-        <h3> Would you like to play again? </h3>
-        <button> Play Again </button>
+        <h3 id="winner"></h3>
+        <h2> Would you like to play again? </h2>
+        <button type="button" id="reset"> Play Again </button>
     </div>
 
 </body>
